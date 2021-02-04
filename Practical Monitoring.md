@@ -215,9 +215,36 @@ Formal way of handling issues that arise on production.
 
 
 ### Yelp KPIs
+- Searches performed
+- Reviews placed
+- User signups
+- Business pages claimed
+- Active users
+- Active businesses
+- Ads purchased
+- Review responses placed
 
 ### Reddit KPIs
+- Users currently on the site
+- User logins
+- Comments posted
+- Threads submitted
+- Votes caste
+- Private messages sent
+- Gold purchased
+- Ads purchased
 
 ### Corelating Business KPIs to Technical Metrics
 
+
+| Business KPI                | Technical Metrics                                 |
+|:--------------------------- | ------------------------------------------------- |
+| Users currently on the site | Users currently on the site                       |
+| User logins                 | User login failures, login latency                |
+| Comments submitted          | Comment submission failures, submission latency   |
+| Threads submitted           | Threads submission failures, submission latency   |
+| Votes Caste                 | Vote failures, vote latency                       |
+| Private messages sent       | Private message failures, submission latency      |
+| Gold purchased              | Purchase failures, Purchase latency               |
+| Ads purchased               | Purchase failures, Purchase latency               |
 
