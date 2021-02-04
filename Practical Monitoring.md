@@ -288,22 +288,60 @@ Formal way of handling issues that arise on production.
 ## Server Monitoring
 
 ### Standard OS Metrics
+- Record them for every system
+- Don't setup alerts on them
+- Metrics
+  - CPU (comes from `/proc/stat`)
+  - Memory (`/proc/meminfo`)
+  - Network (`/proc/net/dev`)
+  - Disk (`/proc/diskstats`)
+  - Load (`/proc/loadavg`)
 ### SSL Certtificates
-### Web Servers
-### Database Servers
-### Loadbalancers
-### Message Queue
-### Caching
-### DNS
-### NTP
-### Scheduled Jobs
+- Alerts from Domain Registrars and CAs
+- PingDom and StatusCake to alert on certificate expiration
+- Internal monitoring tool for internal certificates
 
----
+
+### Web Servers
+Metrics to monitor
+- Request per second
+- HTTP status codes
+- Keepalives
+- Request time
+### Database Servers
+- number of connections
+- queries per second
+- Slow queries (APM tools)
+- Replication delay
+- IOPS
+
+
+### Loadbalancers
+- Similar to webserver metrics
+- frontend and backend metrics
+
+
+### Message Queue
+- queue length
+- consumption rate
+### Caching
+- number of evicted items - high means cache too small
+- cache hit/miss ratio
+- 
+### DNS (Self hosted)
+- zone transfers
+- queries per second
+
+### NTP
+- time drift between client and server - `ntpstat`
+- drift betwwn peers and serrver - `ntpdate`
+
 
 ## Security Monitoring
-
+- `auditd` + `audisp-remote`
+- **HIDS**: `rkhunter`
+- **NIDS**: careful placement of network taps
 ---
 
-## Monitoring Assessment
 
 
