@@ -57,7 +57,7 @@ Dashboard products:
 - Smashing
 
 ## Nyquist–Shannon sampling theorem
-> To measure outage of 2 minutes, you must be collecting data in minuite-long intervals. Thus to measure availability down too one second, you must be collecting data in sub-second intervals, That is why reporting SLA better than 99% is so difficult.
+> To measure outage of 2 minutes, you must be collecting data in minuite-long intervals. Thus to measure availability down to one second, you must be collecting data in sub-second intervals, That is why reporting SLA better than 99% is so difficult.
 
 
 ---
@@ -247,4 +247,63 @@ Formal way of handling issues that arise on production.
 | Private messages sent       | Private message failures, submission latency      |
 | Gold purchased              | Purchase failures, Purchase latency               |
 | Ads purchased               | Purchase failures, Purchase latency               |
+
+## Frontend Monitoring
+- Monitor page load times for actual users
+- Monitor for Javascript exceptions
+- Keep track of page load times over time with your CI system, ensuring times stay within acceptable ranges
+
+- [Exception tracking Saas](https://sentry.io/)
+
+## Application Monitoring
+
+- Instrumenting your apps with metrics and logs 
+  - [StatsD](https://github.com/statsd/statsd) 
+- Tracking releases and correlating performance in your app and infrastructure.
+
+### Health endpoint pattern
+  - can bue used by load balanmceers and service discovery tools
+  - check DB connection
+  - Checking connection with external services
+  - Check other services
+  - Use HTTP status code (E.G: 200 id all okay, 503 if failures are there )
+  - JSON response contains checks for each component and error messages.
+
+### Application logging
+- Use structured logs (JSON)
+- rsyslog forwarding
+- Sass logging services, Elastic Search
+
+### Microservices
+- Distributed Tracing
+- Think about how to measure latency
+
+### Reference
+- [Open Tracing](https://opentracing.io/docs/overview/what-is-tracing/)
+- [StatsD](https://www.datadoghq.com/blog/statsd/)
+
+
+---
+
+## Server Monitoring
+
+### Standard OS Metrics
+### SSL Certtificates
+### Web Servers
+### Database Servers
+### Loadbalancers
+### Message Queue
+### Caching
+### DNS
+### NTP
+### Scheduled Jobs
+
+---
+
+## Security Monitoring
+
+---
+
+## Monitoring Assessment
+
 
