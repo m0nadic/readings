@@ -54,6 +54,24 @@
   - HAProxy's stats page
   -  the `varnishstats` command-line tool.
 
+### Metric Collection
 
+#### Approaches
+- Push Based
+  - Metrics are sent either directly from the `producing application` or from a `local agent` to the `collecting service`
+  - Frequency of metric/event generation is too high.
+  - **Examples** :
+    - Riemann
+    - StatsD
+    - Elasticsearch, Logstash and the Kibana (ELK) stack
+    - Graphite, OpenTSDB
+    - Telegraf, InfluxDB, Chronograph, and Kapacitor (TICK)
+    - Nagios Service Check Acceptor (NSCA)
 
+- Pull Based
+  - collect metrics directly from applications or from proxy processes that make those metrics available to the system. 
+  - **Examples**:
+    - Nagios 
+    - Nagios-style systems `(Icinga, Zabbix, Zenoss, and Sensu)`. 
+    - Prometheus.
 
