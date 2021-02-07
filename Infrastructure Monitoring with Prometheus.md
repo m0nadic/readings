@@ -75,3 +75,26 @@
     - Nagios-style systems `(Icinga, Zabbix, Zenoss, and Sensu)`. 
     - Prometheus.
 
+#### Metrics to observe
+Methods for reducing noise and improving visibility on performance and general reliability concerns.
+
+##### Google's four golden signals
+
+- **Latency**: The time required to serve a request
+- **Traffic**: The number of requests being made
+- **Errors**: The rate of failing requests
+- **Saturation**: The amount of work not being processed, which is usually queued
+
+##### Brendan Gregg's USE method
+machine focussed
+- **Utilization**: Measured as the percentage of the resource that was busy
+- **Saturation**: The amount of work the resource was not able to process, which is usually queued
+- **Errors**: Amount of errors that occurred 
+
+##### Tom Wilkie's RED method
+focussed on service level approach, experience of external clients, 
+
+- **Rate**: Translated as requests per second
+- **Errors**: The amount of failing requests per second
+- **Duration**: The time taken by those requests
+
