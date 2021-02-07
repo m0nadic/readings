@@ -19,8 +19,8 @@
   - Information is obtained in aggregated form
 - Logging
   - much more than metrics
-  - manifests itself as an evend from an application or system
-  - contains all information produces with that event
+  - manifests itself as an event from an application or system
+  - contains all information produced with that event
   - not aggregated and has full context 
 - Tracing
 - Alerting
