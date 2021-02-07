@@ -98,3 +98,22 @@ focussed on service level approach, experience of external clients,
 - **Errors**: The amount of failing requests per second
 - **Duration**: The time taken by those requests
 
+## Prometheus Ecosystem
+
+### Overview
+- Time-series based, opensource monitoring system
+- collects data by sending HTTTP requests hosts and services on metrics endpoints
+- collected data is made available for analysis and alerting
+- powerful query language 
+
+### Architecture
+
+#### Components
+
+- **Prometheus server**: collects time series data, stores it, makes it available for querying, and sends alerts based on it.
+- **Alertmanager**: receives alert triggers from Prometheus and handles routing and dispatching of alerts.
+- **Pushgateway**: handles the exposition of metrics that have been pushed from short-lived jobs such as cron or batch jobs.
+- **Applications**: make internal state available through an HTTP endpoint.
+- **Exporters**: expose metrics from applications that do not support Prometheus natively.
+- **Dashboards**: provide a visualization of collected data.
+
